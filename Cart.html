@@ -1,0 +1,876 @@
+<!DOCTYPE html>
+<html style="font-size: 16px;" lang="en"><head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
+    <meta name="keywords" content="Product 1 Title, Product 2 Title, Product 3 Title, Thank you!">
+    <meta name="description" content="">
+    <link rel="icon" href="images/logo-miracle-mới.ico" type="image/x-icon">
+    <title>Giỏ hàng</title>
+    <link rel="stylesheet" href="nicepage.css" media="screen">
+<link rel="stylesheet" href="Cart.css" media="screen">
+    <script class="u-script" type="text/javascript" src="jquery.js" defer=""></script>
+    <script class="u-script" type="text/javascript" src="nicepage.js" defer=""></script>
+    <script class="u-script" type="text/javascript" src="bonus.js" defer=""></script>
+    <meta name="generator" content="Nicepage 5.19.3, nicepage.com">
+    <link id="u-theme-google-font" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i|Open+Sans:300,300i,400,400i,500,500i,600,600i,700,700i,800,800i">
+    
+    
+    
+    
+    
+    
+    <script type="application/ld+json">{
+		"@context": "http://schema.org",
+		"@type": "Organization",
+		"name": "",
+		"logo": "images/logomiraclemi.png"
+}</script>
+    <meta name="theme-color" content="#478ac9">
+    <meta property="og:title" content="Cart">
+    <meta property="og:type" content="website">
+  <meta data-intl-tel-input-cdn-path="intlTelInput/"></head>
+  <body data-path-to-root="./" class="u-body u-xl-mode" data-lang="en"><header class="u-clearfix u-header u-header" id="sec-f225"><div class="u-clearfix u-sheet u-valign-middle u-sheet-1">
+        <nav class="u-menu u-menu-one-level u-offcanvas u-menu-1">
+          <div class="menu-collapse" style="font-size: 1rem; letter-spacing: 0px;">
+            <a class="u-button-style u-custom-left-right-menu-spacing u-custom-padding-bottom u-custom-top-bottom-menu-spacing u-nav-link u-text-active-palette-1-base u-text-hover-palette-2-base" href="#">
+              <svg class="u-svg-link" viewBox="0 0 24 24"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#menu-hamburger"></use></svg>
+              <svg class="u-svg-content" version="1.1" id="menu-hamburger" viewBox="0 0 16 16" x="0px" y="0px" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg"><g><rect y="1" width="16" height="2"></rect><rect y="7" width="16" height="2"></rect><rect y="13" width="16" height="2"></rect>
+</g></svg>
+            </a>
+          </div>
+          <div class="u-custom-menu u-nav-container">
+            <ul class="u-nav u-unstyled u-nav-1"><li class="u-nav-item"><a class="u-button-style u-nav-link u-text-active-palette-1-base u-text-hover-palette-2-base" href="Home.html" style="padding: 10px 20px;">Trang chủ</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link u-text-active-palette-1-base u-text-hover-palette-2-base" href="Cart.html" style="padding: 10px 20px;">Giỏ hàng</a>
+
+</li></ul>
+          </div>
+          <div class="u-custom-menu u-nav-container-collapse">
+            <div class="u-black u-container-style u-inner-container-layout u-opacity u-opacity-95 u-sidenav">
+              <div class="u-inner-container-layout u-sidenav-overflow">
+                <div class="u-menu-close"></div>
+                <ul class="u-align-center u-nav u-popupmenu-items u-unstyled u-nav-2"><li class="u-nav-item"><a class="u-button-style u-nav-link" href="Home.html">Trang chủ</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="Cart.html">Giỏ hàng</a>
+
+</li></ul>
+              </div>
+            </div>
+            <div class="u-black u-menu-overlay u-opacity u-opacity-70"></div>
+          </div>
+        </nav>
+        <a href="Home.html" class="u-image u-logo u-image-1" data-image-width="500" data-image-height="500">
+          <img src="images/logomiraclemi.png" class="u-logo-image u-logo-image-1">
+        </a>
+      </div></header>
+    <section class="u-clearfix u-section-1" id="sec-af12">
+      <div class="u-clearfix u-sheet u-sheet-1" style ="padding-bottom: 60px;">
+        <div class="u-cart u-cart-1">
+          <div class="u-cart-products-table u-table u-table-responsive">
+            <table class="u-table-entity">
+              <colgroup>
+                <col width="65%">
+                <col width="15%">
+                <col width="15%">
+                <col width="10%">
+              </colgroup>
+              <thead class="u-table-header">
+                <tr style="height: 31px;">
+                  <th class="u-border-1 u-border-grey-dark-1 u-table-cell">Sản phẩm </th>
+                  <th class="u-border-1 u-border-grey-dark-1 u-table-cell">Đơn giá </th>
+                  <th class="u-border-1 u-border-grey-dark-1 u-table-cell">Số lượng </th>
+                  <th class="u-border-1 u-border-grey-dark-1 u-table-cell">Tổng </th>
+                </tr>
+              </thead>
+              <tbody class="u-table-body">
+                <tr>
+                  <td class="u-border-1 u-border-grey-dark-1 u-table-cell"><span class="u-cart-remove-item u-icon u-icon-1"><svg class="u-svg-content" viewBox="0 0 52 52" x="0px" y="0px" style="width: 1em; height: 1em;"><g><path d="M26,0C11.664,0,0,11.663,0,26s11.664,26,26,26s26-11.663,26-26S40.336,0,26,0z M26,50C12.767,50,2,39.233,2,26
+		S12.767,2,26,2s24,10.767,24,24S39.233,50,26,50z"></path><path d="M35.707,16.293c-0.391-0.391-1.023-0.391-1.414,0L26,24.586l-8.293-8.293c-0.391-0.391-1.023-0.391-1.414,0
+		s-0.391,1.023,0,1.414L24.586,26l-8.293,8.293c-0.391,0.391-0.391,1.023,0,1.414C16.488,35.902,16.744,36,17,36
+		s0.512-0.098,0.707-0.293L26,27.414l8.293,8.293C34.488,35.902,34.744,36,35,36s0.512-0.098,0.707-0.293
+		c0.391-0.391,0.391-1.023,0-1.414L27.414,26l8.293-8.293C36.098,17.316,36.098,16.684,35.707,16.293z"></path>
+</g></svg></span>
+                    <img class="u-cart-product-image u-image u-image-default u-product-control" src="images/bcxu.png" data-image-width="564" data-image-height="564">
+                    <h2 class="u-cart-product-title u-product-control u-text u-text-1">
+                      <a class="u-product-title-link" href="#">Bạc Xỉu</a>
+                    </h2>
+                  </td>
+                  <td class="u-border-1 u-border-grey-dark-1 u-table-cell">
+                    <div class="u-cart-product-price u-product-control u-product-price">
+                      <div class="u-price-wrapper">
+                        <div class="u-hide-price u-old-price"></div>
+                        <div class="u-price donGia">40.000</div>
+                      </div>
+                    </div>
+                  </td>
+                  <td class="u-border-1 u-border-grey-dark-1 u-table-cell">
+                    <div class="u-cart-product-quantity u-product-control u-product-quantity u-product-quantity-1">
+                      <div class="u-hidden u-quantity-label"> Quantity </div>
+                      <div class="u-border-1 u-border-grey-25 u-quantity-input">
+                        <a class="disabled minus u-button-style u-hidden u-quantity-button">
+                          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="m 4 8 h 8" fill="none" stroke="currentColor" stroke-width="1" fill-rule="evenodd"></path></svg>
+                        </a>
+                        <input class="u-input nhap" type="text" value="0" pattern="[0-9]+">
+                        <a class="plus u-button-style u-hidden u-quantity-button">
+                          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="m 4 8 h 8 M 8 4 v 8" fill="none" stroke="currentColor" stroke-width="1" fill-rule="evenodd"></path></svg>
+                        </a>
+                      </div>
+                    </div>
+                  </td>
+                  <td class="u-border-1 u-border-grey-dark-1 u-table-cell">
+                    <div class="u-cart-product-subtotal u-product-control u-product-price">
+                      <div class="u-price-wrapper">
+                        <div class="u-hide-price u-old-price"></div>
+                        <div class="u-price tongGia" style="font-weight: 700;">0</div>
+                      </div>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td class="u-border-1 u-border-grey-dark-1 u-table-cell"><span class="u-cart-remove-item u-icon u-icon-2"><svg class="u-svg-content" viewBox="0 0 52 52" x="0px" y="0px" style="width: 1em; height: 1em;"><g><path d="M26,0C11.664,0,0,11.663,0,26s11.664,26,26,26s26-11.663,26-26S40.336,0,26,0z M26,50C12.767,50,2,39.233,2,26
+		S12.767,2,26,2s24,10.767,24,24S39.233,50,26,50z"></path><path d="M35.707,16.293c-0.391-0.391-1.023-0.391-1.414,0L26,24.586l-8.293-8.293c-0.391-0.391-1.023-0.391-1.414,0
+		s-0.391,1.023,0,1.414L24.586,26l-8.293,8.293c-0.391,0.391-0.391,1.023,0,1.414C16.488,35.902,16.744,36,17,36
+		s0.512-0.098,0.707-0.293L26,27.414l8.293,8.293C34.488,35.902,34.744,36,35,36s0.512-0.098,0.707-0.293
+		c0.391-0.391,0.391-1.023,0-1.414L27.414,26l8.293-8.293C36.098,17.316,36.098,16.684,35.707,16.293z"></path>
+</g></svg></span>
+                    <img class="u-cart-product-image u-image u-image-default u-product-control" src="images/Cphtrng.png">
+                    <h2 class="u-cart-product-title u-product-control u-text u-text-2">
+                      <a class="u-product-title-link" href="#">Cà Phê Trứng</a>
+                    </h2>
+                  </td>
+                  <td class="u-border-1 u-border-grey-dark-1 u-table-cell">
+                    <div class="u-cart-product-price u-product-control u-product-price">
+                      <div class="u-price-wrapper">
+                        <div class="u-hide-price u-old-price"></div>
+                        <div class="u-price donGia">55.000</div>
+                      </div>
+                    </div>
+                  </td>
+                  <td class="u-border-1 u-border-grey-dark-1 u-table-cell">
+                    <div class="u-cart-product-quantity u-product-control u-product-quantity u-product-quantity-2">
+                      <div class="u-hidden u-quantity-label"> Quantity </div>
+                      <div class="u-border-1 u-border-grey-25 u-quantity-input">
+                        <a class="disabled minus u-button-style u-hidden u-quantity-button">
+                          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="m 4 8 h 8" fill="none" stroke="currentColor" stroke-width="1" fill-rule="evenodd"></path></svg>
+                        </a>
+                        <input class="u-input nhap" type="text" value="0" pattern="[0-9]+">
+                        <a class="plus u-button-style u-hidden u-quantity-button">
+                          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="m 4 8 h 8 M 8 4 v 8" fill="none" stroke="currentColor" stroke-width="1" fill-rule="evenodd"></path></svg>
+                        </a>
+                      </div>
+                    </div>
+                  </td>
+                  <td class="u-border-1 u-border-grey-dark-1 u-table-cell">
+                    <div class="u-cart-product-subtotal u-product-control u-product-price">
+                      <div class="u-price-wrapper">
+                        <div class="u-hide-price u-old-price"></div>
+                        <div class="u-price tongGia" style="font-weight: 700;">0</div>
+                      </div>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td class="u-border-1 u-border-grey-dark-1 u-table-cell"><span class="u-cart-remove-item u-icon u-icon-3"><svg class="u-svg-content" viewBox="0 0 52 52" x="0px" y="0px" style="width: 1em; height: 1em;"><g><path d="M26,0C11.664,0,0,11.663,0,26s11.664,26,26,26s26-11.663,26-26S40.336,0,26,0z M26,50C12.767,50,2,39.233,2,26
+		S12.767,2,26,2s24,10.767,24,24S39.233,50,26,50z"></path><path d="M35.707,16.293c-0.391-0.391-1.023-0.391-1.414,0L26,24.586l-8.293-8.293c-0.391-0.391-1.023-0.391-1.414,0
+		s-0.391,1.023,0,1.414L24.586,26l-8.293,8.293c-0.391,0.391-0.391,1.023,0,1.414C16.488,35.902,16.744,36,17,36
+		s0.512-0.098,0.707-0.293L26,27.414l8.293,8.293C34.488,35.902,34.744,36,35,36s0.512-0.098,0.707-0.293
+		c0.391-0.391,0.391-1.023,0-1.414L27.414,26l8.293-8.293C36.098,17.316,36.098,16.684,35.707,16.293z"></path>
+</g></svg></span>
+                    <img class="u-cart-product-image u-image u-image-default u-product-control" src="images/latte.png">
+                    <h2 class="u-cart-product-title u-product-control u-text u-text-3">
+                      <a class="u-product-title-link" href="#">Miracle Latte</a>
+                    </h2>
+                  </td>
+                  <td class="u-border-1 u-border-grey-dark-1 u-table-cell">
+                    <div class="u-cart-product-price u-product-control u-product-price">
+                      <div class="u-price-wrapper">
+                        <div class="u-hide-price u-old-price"></div>
+                        <div class="u-price donGia">60.000</div>
+                      </div>
+                    </div>
+                  </td>
+                  <td class="u-border-1 u-border-grey-dark-1 u-table-cell">
+                    <div class="u-cart-product-quantity u-product-control u-product-quantity u-product-quantity-3">
+                      <div class="u-hidden u-quantity-label"> Quantity </div>
+                      <div class="u-border-1 u-border-grey-25 u-quantity-input">
+                        <a class="disabled minus u-button-style u-hidden u-quantity-button">
+                          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="m 4 8 h 8" fill="none" stroke="currentColor" stroke-width="1" fill-rule="evenodd"></path></svg>
+                        </a>
+                        <input class="u-input nhap" type="text" value="0" pattern="[0-9]+">
+                        <a class="plus u-button-style u-hidden u-quantity-button">
+                          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="m 4 8 h 8 M 8 4 v 8" fill="none" stroke="currentColor" stroke-width="1" fill-rule="evenodd"></path></svg>
+                        </a>
+                      </div>
+                    </div>
+                  </td>
+                  <td class="u-border-1 u-border-grey-dark-1 u-table-cell">
+                    <div class="u-cart-product-subtotal u-product-control u-product-price">
+                      <div class="u-price-wrapper">
+                        <div class="u-hide-price u-old-price"></div>
+                        <div class="u-price tongGia"  style="font-weight: 700;">0</div>
+                      </div>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td class="u-border-1 u-border-grey-dark-1 u-table-cell"><span class="u-cart-remove-item u-icon u-icon-1"><svg class="u-svg-content" viewBox="0 0 52 52" x="0px" y="0px" style="width: 1em; height: 1em;"><g><path d="M26,0C11.664,0,0,11.663,0,26s11.664,26,26,26s26-11.663,26-26S40.336,0,26,0z M26,50C12.767,50,2,39.233,2,26
+		S12.767,2,26,2s24,10.767,24,24S39.233,50,26,50z"></path><path d="M35.707,16.293c-0.391-0.391-1.023-0.391-1.414,0L26,24.586l-8.293-8.293c-0.391-0.391-1.023-0.391-1.414,0
+		s-0.391,1.023,0,1.414L24.586,26l-8.293,8.293c-0.391,0.391-0.391,1.023,0,1.414C16.488,35.902,16.744,36,17,36
+		s0.512-0.098,0.707-0.293L26,27.414l8.293,8.293C34.488,35.902,34.744,36,35,36s0.512-0.098,0.707-0.293
+		c0.391-0.391,0.391-1.023,0-1.414L27.414,26l8.293-8.293C36.098,17.316,36.098,16.684,35.707,16.293z"></path>
+</g></svg></span>
+                    <img class="u-cart-product-image u-image u-image-default u-product-control" src="images/Trsamatcha.png" data-image-width="564" data-image-height="564">
+                    <h2 class="u-cart-product-title u-product-control u-text u-text-1">
+                      <a class="u-product-title-link" href="#">Miracle Matcha</a>
+                    </h2>
+                  </td>
+                  <td class="u-border-1 u-border-grey-dark-1 u-table-cell">
+                    <div class="u-cart-product-price u-product-control u-product-price">
+                      <div class="u-price-wrapper">
+                        <div class="u-hide-price u-old-price"></div>
+                        <div class="u-price donGia">45.000</div>
+                      </div>
+                    </div>
+                  </td>
+                  <td class="u-border-1 u-border-grey-dark-1 u-table-cell">
+                    <div class="u-cart-product-quantity u-product-control u-product-quantity u-product-quantity-1">
+                      <div class="u-hidden u-quantity-label"> Quantity </div>
+                      <div class="u-border-1 u-border-grey-25 u-quantity-input">
+                        <a class="disabled minus u-button-style u-hidden u-quantity-button">
+                          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="m 4 8 h 8" fill="none" stroke="currentColor" stroke-width="1" fill-rule="evenodd"></path></svg>
+                        </a>
+                        <input class="u-input nhap" type="text" value="0" pattern="[0-9]+">
+                        <a class="plus u-button-style u-hidden u-quantity-button">
+                          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="m 4 8 h 8 M 8 4 v 8" fill="none" stroke="currentColor" stroke-width="1" fill-rule="evenodd"></path></svg>
+                        </a>
+                      </div>
+                    </div>
+                  </td>
+                  <td class="u-border-1 u-border-grey-dark-1 u-table-cell">
+                    <div class="u-cart-product-subtotal u-product-control u-product-price">
+                      <div class="u-price-wrapper">
+                        <div class="u-hide-price u-old-price"></div>
+                        <div class="u-price tongGia" style="font-weight: 700;">0</div>
+                      </div>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td class="u-border-1 u-border-grey-dark-1 u-table-cell"><span class="u-cart-remove-item u-icon u-icon-1"><svg class="u-svg-content" viewBox="0 0 52 52" x="0px" y="0px" style="width: 1em; height: 1em;"><g><path d="M26,0C11.664,0,0,11.663,0,26s11.664,26,26,26s26-11.663,26-26S40.336,0,26,0z M26,50C12.767,50,2,39.233,2,26
+		S12.767,2,26,2s24,10.767,24,24S39.233,50,26,50z"></path><path d="M35.707,16.293c-0.391-0.391-1.023-0.391-1.414,0L26,24.586l-8.293-8.293c-0.391-0.391-1.023-0.391-1.414,0
+		s-0.391,1.023,0,1.414L24.586,26l-8.293,8.293c-0.391,0.391-0.391,1.023,0,1.414C16.488,35.902,16.744,36,17,36
+		s0.512-0.098,0.707-0.293L26,27.414l8.293,8.293C34.488,35.902,34.744,36,35,36s0.512-0.098,0.707-0.293
+		c0.391-0.391,0.391-1.023,0-1.414L27.414,26l8.293-8.293C36.098,17.316,36.098,16.684,35.707,16.293z"></path>
+</g></svg></span>
+                    <img class="u-cart-product-image u-image u-image-default u-product-control" src="images/TrsaMiracle.png" data-image-width="564" data-image-height="564">
+                    <h2 class="u-cart-product-title u-product-control u-text u-text-1">
+                      <a class="u-product-title-link" href="#">Miracle Milk Tea</a>
+                    </h2>
+                  </td>
+                  <td class="u-border-1 u-border-grey-dark-1 u-table-cell">
+                    <div class="u-cart-product-price u-product-control u-product-price">
+                      <div class="u-price-wrapper">
+                        <div class="u-hide-price u-old-price"></div>
+                        <div class="u-price donGia">45.000</div>
+                      </div>
+                    </div>
+                  </td>
+                  <td class="u-border-1 u-border-grey-dark-1 u-table-cell">
+                    <div class="u-cart-product-quantity u-product-control u-product-quantity u-product-quantity-1">
+                      <div class="u-hidden u-quantity-label"> Quantity </div>
+                      <div class="u-border-1 u-border-grey-25 u-quantity-input">
+                        <a class="disabled minus u-button-style u-hidden u-quantity-button">
+                          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="m 4 8 h 8" fill="none" stroke="currentColor" stroke-width="1" fill-rule="evenodd"></path></svg>
+                        </a>
+                        <input class="u-input nhap" type="text" value="0" pattern="[0-9]+">
+                        <a class="plus u-button-style u-hidden u-quantity-button">
+                          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="m 4 8 h 8 M 8 4 v 8" fill="none" stroke="currentColor" stroke-width="1" fill-rule="evenodd"></path></svg>
+                        </a>
+                      </div>
+                    </div>
+                  </td>
+                  <td class="u-border-1 u-border-grey-dark-1 u-table-cell">
+                    <div class="u-cart-product-subtotal u-product-control u-product-price">
+                      <div class="u-price-wrapper">
+                        <div class="u-hide-price u-old-price"></div>
+                        <div class="u-price tongGia" style="font-weight: 700;">0</div>
+                      </div>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td class="u-border-1 u-border-grey-dark-1 u-table-cell"><span class="u-cart-remove-item u-icon u-icon-1"><svg class="u-svg-content" viewBox="0 0 52 52" x="0px" y="0px" style="width: 1em; height: 1em;"><g><path d="M26,0C11.664,0,0,11.663,0,26s11.664,26,26,26s26-11.663,26-26S40.336,0,26,0z M26,50C12.767,50,2,39.233,2,26
+		S12.767,2,26,2s24,10.767,24,24S39.233,50,26,50z"></path><path d="M35.707,16.293c-0.391-0.391-1.023-0.391-1.414,0L26,24.586l-8.293-8.293c-0.391-0.391-1.023-0.391-1.414,0
+		s-0.391,1.023,0,1.414L24.586,26l-8.293,8.293c-0.391,0.391-0.391,1.023,0,1.414C16.488,35.902,16.744,36,17,36
+		s0.512-0.098,0.707-0.293L26,27.414l8.293,8.293C34.488,35.902,34.744,36,35,36s0.512-0.098,0.707-0.293
+		c0.391-0.391,0.391-1.023,0-1.414L27.414,26l8.293-8.293C36.098,17.316,36.098,16.684,35.707,16.293z"></path>
+</g></svg></span>
+                    <img class="u-cart-product-image u-image u-image-default u-product-control" src="images/Trsaolong.png" data-image-width="564" data-image-height="564">
+                    <h2 class="u-cart-product-title u-product-control u-text u-text-1">
+                      <a class="u-product-title-link" href="#">Miracle Olong</a>
+                    </h2>
+                  </td>
+                  <td class="u-border-1 u-border-grey-dark-1 u-table-cell">
+                    <div class="u-cart-product-price u-product-control u-product-price">
+                      <div class="u-price-wrapper">
+                        <div class="u-hide-price u-old-price"></div>
+                        <div class="u-price donGia">45.000</div>
+                      </div>
+                    </div>
+                  </td>
+                  <td class="u-border-1 u-border-grey-dark-1 u-table-cell">
+                    <div class="u-cart-product-quantity u-product-control u-product-quantity u-product-quantity-1">
+                      <div class="u-hidden u-quantity-label"> Quantity </div>
+                      <div class="u-border-1 u-border-grey-25 u-quantity-input">
+                        <a class="disabled minus u-button-style u-hidden u-quantity-button">
+                          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="m 4 8 h 8" fill="none" stroke="currentColor" stroke-width="1" fill-rule="evenodd"></path></svg>
+                        </a>
+                        <input class="u-input nhap" type="text" value="0" pattern="[0-9]+">
+                        <a class="plus u-button-style u-hidden u-quantity-button">
+                          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="m 4 8 h 8 M 8 4 v 8" fill="none" stroke="currentColor" stroke-width="1" fill-rule="evenodd"></path></svg>
+                        </a>
+                      </div>
+                    </div>
+                  </td>
+                  <td class="u-border-1 u-border-grey-dark-1 u-table-cell">
+                    <div class="u-cart-product-subtotal u-product-control u-product-price">
+                      <div class="u-price-wrapper">
+                        <div class="u-hide-price u-old-price"></div>
+                        <div class="u-price tongGia" style="font-weight: 700;">0</div>
+                      </div>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td class="u-border-1 u-border-grey-dark-1 u-table-cell"><span class="u-cart-remove-item u-icon u-icon-1"><svg class="u-svg-content" viewBox="0 0 52 52" x="0px" y="0px" style="width: 1em; height: 1em;"><g><path d="M26,0C11.664,0,0,11.663,0,26s11.664,26,26,26s26-11.663,26-26S40.336,0,26,0z M26,50C12.767,50,2,39.233,2,26
+		S12.767,2,26,2s24,10.767,24,24S39.233,50,26,50z"></path><path d="M35.707,16.293c-0.391-0.391-1.023-0.391-1.414,0L26,24.586l-8.293-8.293c-0.391-0.391-1.023-0.391-1.414,0
+		s-0.391,1.023,0,1.414L24.586,26l-8.293,8.293c-0.391,0.391-0.391,1.023,0,1.414C16.488,35.902,16.744,36,17,36
+		s0.512-0.098,0.707-0.293L26,27.414l8.293,8.293C34.488,35.902,34.744,36,35,36s0.512-0.098,0.707-0.293
+		c0.391-0.391,0.391-1.023,0-1.414L27.414,26l8.293-8.293C36.098,17.316,36.098,16.684,35.707,16.293z"></path>
+</g></svg></span>
+                    <img class="u-cart-product-image u-image u-image-default u-product-control" src="images/Tiramisu.png" data-image-width="564" data-image-height="564">
+                    <h2 class="u-cart-product-title u-product-control u-text u-text-1">
+                      <a class="u-product-title-link" href="#">Tiramisu</a>
+                    </h2>
+                  </td>
+                  <td class="u-border-1 u-border-grey-dark-1 u-table-cell">
+                    <div class="u-cart-product-price u-product-control u-product-price">
+                      <div class="u-price-wrapper">
+                        <div class="u-hide-price u-old-price"></div>
+                        <div class="u-price donGia">39.000</div>
+                      </div>
+                    </div>
+                  </td>
+                  <td class="u-border-1 u-border-grey-dark-1 u-table-cell">
+                    <div class="u-cart-product-quantity u-product-control u-product-quantity u-product-quantity-1">
+                      <div class="u-hidden u-quantity-label"> Quantity </div>
+                      <div class="u-border-1 u-border-grey-25 u-quantity-input">
+                        <a class="disabled minus u-button-style u-hidden u-quantity-button">
+                          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="m 4 8 h 8" fill="none" stroke="currentColor" stroke-width="1" fill-rule="evenodd"></path></svg>
+                        </a>
+                        <input class="u-input nhap" type="text" value="0" pattern="[0-9]+">
+                        <a class="plus u-button-style u-hidden u-quantity-button">
+                          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="m 4 8 h 8 M 8 4 v 8" fill="none" stroke="currentColor" stroke-width="1" fill-rule="evenodd"></path></svg>
+                        </a>
+                      </div>
+                    </div>
+                  </td>
+                  <td class="u-border-1 u-border-grey-dark-1 u-table-cell">
+                    <div class="u-cart-product-subtotal u-product-control u-product-price">
+                      <div class="u-price-wrapper">
+                        <div class="u-hide-price u-old-price"></div>
+                        <div class="u-price tongGia" style="font-weight: 700;">0</div>
+                      </div>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td class="u-border-1 u-border-grey-dark-1 u-table-cell"><span class="u-cart-remove-item u-icon u-icon-1"><svg class="u-svg-content" viewBox="0 0 52 52" x="0px" y="0px" style="width: 1em; height: 1em;"><g><path d="M26,0C11.664,0,0,11.663,0,26s11.664,26,26,26s26-11.663,26-26S40.336,0,26,0z M26,50C12.767,50,2,39.233,2,26
+		S12.767,2,26,2s24,10.767,24,24S39.233,50,26,50z"></path><path d="M35.707,16.293c-0.391-0.391-1.023-0.391-1.414,0L26,24.586l-8.293-8.293c-0.391-0.391-1.023-0.391-1.414,0
+		s-0.391,1.023,0,1.414L24.586,26l-8.293,8.293c-0.391,0.391-0.391,1.023,0,1.414C16.488,35.902,16.744,36,17,36
+		s0.512-0.098,0.707-0.293L26,27.414l8.293,8.293C34.488,35.902,34.744,36,35,36s0.512-0.098,0.707-0.293
+		c0.391-0.391,0.391-1.023,0-1.414L27.414,26l8.293-8.293C36.098,17.316,36.098,16.684,35.707,16.293z"></path>
+</g></svg></span>
+                    <img class="u-cart-product-image u-image u-image-default u-product-control" src="images/lavacake.png" data-image-width="564" data-image-height="564">
+                    <h2 class="u-cart-product-title u-product-control u-text u-text-1">
+                      <a class="u-product-title-link" href="#">Bánh Lava</a>
+                    </h2>
+                  </td>
+                  <td class="u-border-1 u-border-grey-dark-1 u-table-cell">
+                    <div class="u-cart-product-price u-product-control u-product-price">
+                      <div class="u-price-wrapper">
+                        <div class="u-hide-price u-old-price"></div>
+                        <div class="u-price donGia">59.000</div>
+                      </div>
+                    </div>
+                  </td>
+                  <td class="u-border-1 u-border-grey-dark-1 u-table-cell">
+                    <div class="u-cart-product-quantity u-product-control u-product-quantity u-product-quantity-1">
+                      <div class="u-hidden u-quantity-label"> Quantity </div>
+                      <div class="u-border-1 u-border-grey-25 u-quantity-input">
+                        <a class="disabled minus u-button-style u-hidden u-quantity-button">
+                          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="m 4 8 h 8" fill="none" stroke="currentColor" stroke-width="1" fill-rule="evenodd"></path></svg>
+                        </a>
+                        <input class="u-input nhap" type="text" value="0" pattern="[0-9]+">
+                        <a class="plus u-button-style u-hidden u-quantity-button">
+                          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="m 4 8 h 8 M 8 4 v 8" fill="none" stroke="currentColor" stroke-width="1" fill-rule="evenodd"></path></svg>
+                        </a>
+                      </div>
+                    </div>
+                  </td>
+                  <td class="u-border-1 u-border-grey-dark-1 u-table-cell">
+                    <div class="u-cart-product-subtotal u-product-control u-product-price">
+                      <div class="u-price-wrapper">
+                        <div class="u-hide-price u-old-price"></div>
+                        <div class="u-price tongGia" style="font-weight: 700;">0</div>
+                      </div>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td class="u-border-1 u-border-grey-dark-1 u-table-cell"><span class="u-cart-remove-item u-icon u-icon-1"><svg class="u-svg-content" viewBox="0 0 52 52" x="0px" y="0px" style="width: 1em; height: 1em;"><g><path d="M26,0C11.664,0,0,11.663,0,26s11.664,26,26,26s26-11.663,26-26S40.336,0,26,0z M26,50C12.767,50,2,39.233,2,26
+		S12.767,2,26,2s24,10.767,24,24S39.233,50,26,50z"></path><path d="M35.707,16.293c-0.391-0.391-1.023-0.391-1.414,0L26,24.586l-8.293-8.293c-0.391-0.391-1.023-0.391-1.414,0
+		s-0.391,1.023,0,1.414L24.586,26l-8.293,8.293c-0.391,0.391-0.391,1.023,0,1.414C16.488,35.902,16.744,36,17,36
+		s0.512-0.098,0.707-0.293L26,27.414l8.293,8.293C34.488,35.902,34.744,36,35,36s0.512-0.098,0.707-0.293
+		c0.391-0.391,0.391-1.023,0-1.414L27.414,26l8.293-8.293C36.098,17.316,36.098,16.684,35.707,16.293z"></path>
+</g></svg></span>
+                    <img class="u-cart-product-image u-image u-image-default u-product-control" src="images/Cheesecake.png" data-image-width="564" data-image-height="564">
+                    <h2 class="u-cart-product-title u-product-control u-text u-text-1">
+                      <a class="u-product-title-link" href="#">Cheesecake</a>
+                    </h2>
+                  </td>
+                  <td class="u-border-1 u-border-grey-dark-1 u-table-cell">
+                    <div class="u-cart-product-price u-product-control u-product-price">
+                      <div class="u-price-wrapper">
+                        <div class="u-hide-price u-old-price"></div>
+                        <div class="u-price donGia">39.000</div>
+                      </div>
+                    </div>
+                  </td>
+                  <td class="u-border-1 u-border-grey-dark-1 u-table-cell">
+                    <div class="u-cart-product-quantity u-product-control u-product-quantity u-product-quantity-1">
+                      <div class="u-hidden u-quantity-label"> Quantity </div>
+                      <div class="u-border-1 u-border-grey-25 u-quantity-input">
+                        <a class="disabled minus u-button-style u-hidden u-quantity-button">
+                          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="m 4 8 h 8" fill="none" stroke="currentColor" stroke-width="1" fill-rule="evenodd"></path></svg>
+                        </a>
+                        <input class="u-input nhap" type="text" value="0" pattern="[0-9]+">
+                        <a class="plus u-button-style u-hidden u-quantity-button">
+                          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="m 4 8 h 8 M 8 4 v 8" fill="none" stroke="currentColor" stroke-width="1" fill-rule="evenodd"></path></svg>
+                        </a>
+                      </div>
+                    </div>
+                  </td>
+                  <td class="u-border-1 u-border-grey-dark-1 u-table-cell">
+                    <div class="u-cart-product-subtotal u-product-control u-product-price">
+                      <div class="u-price-wrapper">
+                        <div class="u-hide-price u-old-price"></div>
+                        <div class="u-price tongGia" style="font-weight: 700;">0</div>
+                      </div>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td class="u-border-1 u-border-grey-dark-1 u-table-cell"><span class="u-cart-remove-item u-icon u-icon-1"><svg class="u-svg-content" viewBox="0 0 52 52" x="0px" y="0px" style="width: 1em; height: 1em;"><g><path d="M26,0C11.664,0,0,11.663,0,26s11.664,26,26,26s26-11.663,26-26S40.336,0,26,0z M26,50C12.767,50,2,39.233,2,26
+		S12.767,2,26,2s24,10.767,24,24S39.233,50,26,50z"></path><path d="M35.707,16.293c-0.391-0.391-1.023-0.391-1.414,0L26,24.586l-8.293-8.293c-0.391-0.391-1.023-0.391-1.414,0
+		s-0.391,1.023,0,1.414L24.586,26l-8.293,8.293c-0.391,0.391-0.391,1.023,0,1.414C16.488,35.902,16.744,36,17,36
+		s0.512-0.098,0.707-0.293L26,27.414l8.293,8.293C34.488,35.902,34.744,36,35,36s0.512-0.098,0.707-0.293
+		c0.391-0.391,0.391-1.023,0-1.414L27.414,26l8.293-8.293C36.098,17.316,36.098,16.684,35.707,16.293z"></path>
+</g></svg></span>
+                    <img class="u-cart-product-image u-image u-image-default u-product-control" src="images/Croissant.png" data-image-width="564" data-image-height="564">
+                    <h2 class="u-cart-product-title u-product-control u-text u-text-1">
+                      <a class="u-product-title-link" href="#">Croissant</a>
+                    </h2>
+                  </td>
+                  <td class="u-border-1 u-border-grey-dark-1 u-table-cell">
+                    <div class="u-cart-product-price u-product-control u-product-price">
+                      <div class="u-price-wrapper">
+                        <div class="u-hide-price u-old-price"></div>
+                        <div class="u-price donGia">39.000</div>
+                      </div>
+                    </div>
+                  </td>
+                  <td class="u-border-1 u-border-grey-dark-1 u-table-cell">
+                    <div class="u-cart-product-quantity u-product-control u-product-quantity u-product-quantity-1">
+                      <div class="u-hidden u-quantity-label"> Quantity </div>
+                      <div class="u-border-1 u-border-grey-25 u-quantity-input">
+                        <a class="disabled minus u-button-style u-hidden u-quantity-button">
+                          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="m 4 8 h 8" fill="none" stroke="currentColor" stroke-width="1" fill-rule="evenodd"></path></svg>
+                        </a>
+                        <input class="u-input nhap" type="text" value="0" pattern="[0-9]+">
+                        <a class="plus u-button-style u-hidden u-quantity-button">
+                          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="m 4 8 h 8 M 8 4 v 8" fill="none" stroke="currentColor" stroke-width="1" fill-rule="evenodd"></path></svg>
+                        </a>
+                      </div>
+                    </div>
+                  </td>
+                  <td class="u-border-1 u-border-grey-dark-1 u-table-cell">
+                    <div class="u-cart-product-subtotal u-product-control u-product-price">
+                      <div class="u-price-wrapper">
+                        <div class="u-hide-price u-old-price"></div>
+                        <div class="u-price tongGia" style="font-weight: 700;">0</div>
+                      </div>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td class="u-border-1 u-border-grey-dark-1 u-table-cell"><span class="u-cart-remove-item u-icon u-icon-1"><svg class="u-svg-content" viewBox="0 0 52 52" x="0px" y="0px" style="width: 1em; height: 1em;"><g><path d="M26,0C11.664,0,0,11.663,0,26s11.664,26,26,26s26-11.663,26-26S40.336,0,26,0z M26,50C12.767,50,2,39.233,2,26
+		S12.767,2,26,2s24,10.767,24,24S39.233,50,26,50z"></path><path d="M35.707,16.293c-0.391-0.391-1.023-0.391-1.414,0L26,24.586l-8.293-8.293c-0.391-0.391-1.023-0.391-1.414,0
+		s-0.391,1.023,0,1.414L24.586,26l-8.293,8.293c-0.391,0.391-0.391,1.023,0,1.414C16.488,35.902,16.744,36,17,36
+		s0.512-0.098,0.707-0.293L26,27.414l8.293,8.293C34.488,35.902,34.744,36,35,36s0.512-0.098,0.707-0.293
+		c0.391-0.391,0.391-1.023,0-1.414L27.414,26l8.293-8.293C36.098,17.316,36.098,16.684,35.707,16.293z"></path>
+</g></svg></span>
+                    <img class="u-cart-product-image u-image u-image-default u-product-control" src="images/Scxun1.png" data-image-width="564" data-image-height="564">
+                    <h2 class="u-cart-product-title u-product-control u-text u-text-1">
+                      <a class="u-product-title-link" href="#">Sắc Xuân</a>
+                    </h2>
+                  </td>
+                  <td class="u-border-1 u-border-grey-dark-1 u-table-cell">
+                    <div class="u-cart-product-price u-product-control u-product-price">
+                      <div class="u-price-wrapper">
+                        <div class="u-hide-price u-old-price"></div>
+                        <div class="u-price donGia">59.000</div>
+                      </div>
+                    </div>
+                  </td>
+                  <td class="u-border-1 u-border-grey-dark-1 u-table-cell">
+                    <div class="u-cart-product-quantity u-product-control u-product-quantity u-product-quantity-1">
+                      <div class="u-hidden u-quantity-label"> Quantity </div>
+                      <div class="u-border-1 u-border-grey-25 u-quantity-input">
+                        <a class="disabled minus u-button-style u-hidden u-quantity-button">
+                          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="m 4 8 h 8" fill="none" stroke="currentColor" stroke-width="1" fill-rule="evenodd"></path></svg>
+                        </a>
+                        <input class="u-input nhap" type="text" value="0" pattern="[0-9]+">
+                        <a class="plus u-button-style u-hidden u-quantity-button">
+                          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="m 4 8 h 8 M 8 4 v 8" fill="none" stroke="currentColor" stroke-width="1" fill-rule="evenodd"></path></svg>
+                        </a>
+                      </div>
+                    </div>
+                  </td>
+                  <td class="u-border-1 u-border-grey-dark-1 u-table-cell">
+                    <div class="u-cart-product-subtotal u-product-control u-product-price">
+                      <div class="u-price-wrapper">
+                        <div class="u-hide-price u-old-price"></div>
+                        <div class="u-price tongGia" style="font-weight: 700;">0</div>
+                      </div>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td class="u-border-1 u-border-grey-dark-1 u-table-cell"><span class="u-cart-remove-item u-icon u-icon-1"><svg class="u-svg-content" viewBox="0 0 52 52" x="0px" y="0px" style="width: 1em; height: 1em;"><g><path d="M26,0C11.664,0,0,11.663,0,26s11.664,26,26,26s26-11.663,26-26S40.336,0,26,0z M26,50C12.767,50,2,39.233,2,26
+		S12.767,2,26,2s24,10.767,24,24S39.233,50,26,50z"></path><path d="M35.707,16.293c-0.391-0.391-1.023-0.391-1.414,0L26,24.586l-8.293-8.293c-0.391-0.391-1.023-0.391-1.414,0
+		s-0.391,1.023,0,1.414L24.586,26l-8.293,8.293c-0.391,0.391-0.391,1.023,0,1.414C16.488,35.902,16.744,36,17,36
+		s0.512-0.098,0.707-0.293L26,27.414l8.293,8.293C34.488,35.902,34.744,36,35,36s0.512-0.098,0.707-0.293
+		c0.391-0.391,0.391-1.023,0-1.414L27.414,26l8.293-8.293C36.098,17.316,36.098,16.684,35.707,16.293z"></path>
+</g></svg></span>
+                    <img class="u-cart-product-image u-image u-image-default u-product-control" src="images/Nngsm.png" data-image-width="564" data-image-height="564">
+                    <h2 class="u-cart-product-title u-product-control u-text u-text-1">
+                      <a class="u-product-title-link" href="#">Nắng Sớm</a>
+                    </h2>
+                  </td>
+                  <td class="u-border-1 u-border-grey-dark-1 u-table-cell">
+                    <div class="u-cart-product-price u-product-control u-product-price">
+                      <div class="u-price-wrapper">
+                        <div class="u-hide-price u-old-price"></div>
+                        <div class="u-price donGia">59.000</div>
+                      </div>
+                    </div>
+                  </td>
+                  <td class="u-border-1 u-border-grey-dark-1 u-table-cell">
+                    <div class="u-cart-product-quantity u-product-control u-product-quantity u-product-quantity-1">
+                      <div class="u-hidden u-quantity-label"> Quantity </div>
+                      <div class="u-border-1 u-border-grey-25 u-quantity-input">
+                        <a class="disabled minus u-button-style u-hidden u-quantity-button">
+                          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="m 4 8 h 8" fill="none" stroke="currentColor" stroke-width="1" fill-rule="evenodd"></path></svg>
+                        </a>
+                        <input class="u-input nhap" type="text" value="0" pattern="[0-9]+">
+                        <a class="plus u-button-style u-hidden u-quantity-button">
+                          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="m 4 8 h 8 M 8 4 v 8" fill="none" stroke="currentColor" stroke-width="1" fill-rule="evenodd"></path></svg>
+                        </a>
+                      </div>
+                    </div>
+                  </td>
+                  <td class="u-border-1 u-border-grey-dark-1 u-table-cell">
+                    <div class="u-cart-product-subtotal u-product-control u-product-price">
+                      <div class="u-price-wrapper">
+                        <div class="u-hide-price u-old-price"></div>
+                        <div class="u-price tongGia" style="font-weight: 700;">0</div>
+                      </div>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td class="u-border-1 u-border-grey-dark-1 u-table-cell"><span class="u-cart-remove-item u-icon u-icon-1"><svg class="u-svg-content" viewBox="0 0 52 52" x="0px" y="0px" style="width: 1em; height: 1em;"><g><path d="M26,0C11.664,0,0,11.663,0,26s11.664,26,26,26s26-11.663,26-26S40.336,0,26,0z M26,50C12.767,50,2,39.233,2,26
+		S12.767,2,26,2s24,10.767,24,24S39.233,50,26,50z"></path><path d="M35.707,16.293c-0.391-0.391-1.023-0.391-1.414,0L26,24.586l-8.293-8.293c-0.391-0.391-1.023-0.391-1.414,0
+		s-0.391,1.023,0,1.414L24.586,26l-8.293,8.293c-0.391,0.391-0.391,1.023,0,1.414C16.488,35.902,16.744,36,17,36
+		s0.512-0.098,0.707-0.293L26,27.414l8.293,8.293C34.488,35.902,34.744,36,35,36s0.512-0.098,0.707-0.293
+		c0.391-0.391,0.391-1.023,0-1.414L27.414,26l8.293-8.293C36.098,17.316,36.098,16.684,35.707,16.293z"></path>
+</g></svg></span>
+                    <img class="u-cart-product-image u-image u-image-default u-product-control" src="images/Gise.png" data-image-width="564" data-image-height="564">
+                    <h2 class="u-cart-product-title u-product-control u-text u-text-1">
+                      <a class="u-product-title-link" href="#">Cheesecake</a>
+                    </h2>
+                  </td>
+                  <td class="u-border-1 u-border-grey-dark-1 u-table-cell">
+                    <div class="u-cart-product-price u-product-control u-product-price">
+                      <div class="u-price-wrapper">
+                        <div class="u-hide-price u-old-price"></div>
+                        <div class="u-price donGia">59.000</div>
+                      </div>
+                    </div>
+                  </td>
+                  <td class="u-border-1 u-border-grey-dark-1 u-table-cell">
+                    <div class="u-cart-product-quantity u-product-control u-product-quantity u-product-quantity-1">
+                      <div class="u-hidden u-quantity-label"> Quantity </div>
+                      <div class="u-border-1 u-border-grey-25 u-quantity-input">
+                        <a class="disabled minus u-button-style u-hidden u-quantity-button">
+                          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="m 4 8 h 8" fill="none" stroke="currentColor" stroke-width="1" fill-rule="evenodd"></path></svg>
+                        </a>
+                        <input class="u-input nhap" type="text" value="0" pattern="[0-9]+">
+                        <a class="plus u-button-style u-hidden u-quantity-button">
+                          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="m 4 8 h 8 M 8 4 v 8" fill="none" stroke="currentColor" stroke-width="1" fill-rule="evenodd"></path></svg>
+                        </a>
+                      </div>
+                    </div>
+                  </td>
+                  <td class="u-border-1 u-border-grey-dark-1 u-table-cell">
+                    <div class="u-cart-product-subtotal u-product-control u-product-price">
+                      <div class="u-price-wrapper">
+                        <div class="u-hide-price u-old-price"></div>
+                        <div class="u-price tongGia" style="font-weight: 700;">0</div>
+                      </div>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td class="u-border-1 u-border-grey-dark-1 u-table-cell"><span class="u-cart-remove-item u-icon u-icon-1"><svg class="u-svg-content" viewBox="0 0 52 52" x="0px" y="0px" style="width: 1em; height: 1em;"><g><path d="M26,0C11.664,0,0,11.663,0,26s11.664,26,26,26s26-11.663,26-26S40.336,0,26,0z M26,50C12.767,50,2,39.233,2,26
+		S12.767,2,26,2s24,10.767,24,24S39.233,50,26,50z"></path><path d="M35.707,16.293c-0.391-0.391-1.023-0.391-1.414,0L26,24.586l-8.293-8.293c-0.391-0.391-1.023-0.391-1.414,0
+		s-0.391,1.023,0,1.414L24.586,26l-8.293,8.293c-0.391,0.391-0.391,1.023,0,1.414C16.488,35.902,16.744,36,17,36
+		s0.512-0.098,0.707-0.293L26,27.414l8.293,8.293C34.488,35.902,34.744,36,35,36s0.512-0.098,0.707-0.293
+		c0.391-0.391,0.391-1.023,0-1.414L27.414,26l8.293-8.293C36.098,17.316,36.098,16.684,35.707,16.293z"></path>
+</g></svg></span>
+                    <img class="u-cart-product-image u-image u-image-default u-product-control" src="images/Matuyt.png" data-image-width="564" data-image-height="564">
+                    <h2 class="u-cart-product-title u-product-control u-text u-text-1">
+                      <a class="u-product-title-link" href="#">Mưa Tuyết</a>
+                    </h2>
+                  </td>
+                  <td class="u-border-1 u-border-grey-dark-1 u-table-cell">
+                    <div class="u-cart-product-price u-product-control u-product-price">
+                      <div class="u-price-wrapper">
+                        <div class="u-hide-price u-old-price"></div>
+                        <div class="u-price donGia">59.000</div>
+                      </div>
+                    </div>
+                  </td>
+                  <td class="u-border-1 u-border-grey-dark-1 u-table-cell">
+                    <div class="u-cart-product-quantity u-product-control u-product-quantity u-product-quantity-1">
+                      <div class="u-hidden u-quantity-label"> Quantity </div>
+                      <div class="u-border-1 u-border-grey-25 u-quantity-input">
+                        <a class="disabled minus u-button-style u-hidden u-quantity-button">
+                          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="m 4 8 h 8" fill="none" stroke="currentColor" stroke-width="1" fill-rule="evenodd"></path></svg>
+                        </a>
+                        <input class="u-input nhap" type="text" value="0" pattern="[0-9]+">
+                        <a class="plus u-button-style u-hidden u-quantity-button">
+                          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="m 4 8 h 8 M 8 4 v 8" fill="none" stroke="currentColor" stroke-width="1" fill-rule="evenodd"></path></svg>
+                        </a>
+                      </div>
+                    </div>
+                  </td>
+                  <td class="u-border-1 u-border-grey-dark-1 u-table-cell">
+                    <div class="u-cart-product-subtotal u-product-control u-product-price">
+                      <div class="u-price-wrapper">
+                        <div class="u-hide-price u-old-price"></div>
+                        <div class="u-price tongGia" style="font-weight: 700;">0</div>
+                      </div>
+                    </div>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="u-cart-button-container">
+            <a href="Home.html" class="u-active-none u-btn u-button-style u-cart-continue-shopping u-hover-none u-none u-text-body-color u-btn-1"><span class="u-icon"><svg class="u-svg-content" viewBox="0 0 443.52 443.52" x="0px" y="0px" style="width: 1em; height: 1em;"><g><g><path d="M143.492,221.863L336.226,29.129c6.663-6.664,6.663-17.468,0-24.132c-6.665-6.662-17.468-6.662-24.132,0l-204.8,204.8    c-6.662,6.664-6.662,17.468,0,24.132l204.8,204.8c6.78,6.548,17.584,6.36,24.132-0.42c6.387-6.614,6.387-17.099,0-23.712    L143.492,221.863z"></path>
+</g>
+</g></svg></span>&nbsp;Tiếp tục mua sắm
+            </a>
+            <a href="#" class="u-btn u-button-style u-cart-update u-grey-5" id = "xuLi">Cập nhật</a>
+          </div>
+          <div class="u-cart-blocks-container">
+            <div class="u-cart-block u-indent-30">
+              <div class="u-cart-block-container u-clearfix">
+                <h5 class="u-cart-block-header u-text">Phiếu giảm giá</h5>
+                <div class="u-cart-block-content u-text"></div>
+              </div>
+            </div>
+            <div class="u-cart-block u-cart-totals-block u-indent-30">
+              <div class="u-cart-block-container u-clearfix">
+                <h5 class="u-cart-block-header u-text">Tổng giá giỏ hàng</h5>
+                <div class="u-align-right u-cart-block-content u-text">
+                  <div class="u-cart-totals-table u-table u-table-responsive">
+                    <table class="u-table-entity">
+                      <colgroup>
+                        <col width="50%">
+                        <col width="50%">
+                      </colgroup>
+                      <tbody class="u-align-right u-table-body">
+                        <tr>
+                          <td class="u-align-left u-border-1 u-border-grey-dark-1 u-first-column u-table-cell u-table-cell-17">Giá trước khuyến mãi</td>
+                          <td class="u-border-1 u-border-grey-dark-1 u-table-cell subtotal-price">0</td>
+                        </tr>
+                        <tr>
+                          <td class="u-align-left u-border-1 u-border-grey-dark-1 u-first-column u-table-cell u-table-cell-19">Tổng</td>
+                          <td class="u-border-1 u-border-grey-dark-1 u-table-cell u-table-cell-20 total-end">0</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                  <a href="#sec-704f" class="u-black u-btn u-button-style u-cart-checkout-btn u-dialog-link u-btn-3">Thanh toán</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="u-cart-form u-form u-form-1" id ="form-responsive">
+          <form action="#" class="u-clearfix u-form-horizontal u-form-spacing-10 u-inner-form" source="custom" name="form" method="post">
+            <div class="u-form-group">
+              <label for="name-5861" class="u-label">Mã giảm giá</label>
+              <input type="text" placeholder="Nhập mã" id="name-5861" name="coupon" class="u-input u-input-rectangle" required="">
+            </div>
+            <div class="u-align-left u-form-group u-form-submit">
+              <a href="#" class="u-black u-btn u-btn-submit u-button-style u-btn-4">Áp dụng</a>
+              <input type="submit" value="submit" class="u-form-control-hidden">
+            </div>
+            <div class="u-form-send-message u-form-send-success">Thank you! Your message has been sent.</div>
+            <div class="u-form-send-error u-form-send-message">Unable to send your message. Please fix errors then try again.</div>
+            <input type="hidden" value="" name="recaptchaResponse">
+          </form>
+        </div>
+      </div>
+    </section>
+    <section class="u-clearfix u-valign-middle u-section-2" id="sec-219c">
+      <div class="data-layout-selected u-clearfix u-layout-wrap u-layout-wrap-1" style="margin-top: 150px; ">
+        <div class="u-layout">
+          <div class="u-layout-row">
+            <div class="u-container-style u-layout-cell u-palette-5-dark-1 u-right-cell u-size-34 u-layout-cell-1">
+              <div class="u-container-layout u-container-layout-1">
+                <h4 class="u-text u-text-custom-color-2 u-text-1"> Đắng kí để nhận thông tin mới !</h4>
+                <div class="u-expanded-width u-form u-form-1">
+                  <form action="https://forms.nicepagesrv.com/v2/form/process" class="u-clearfix u-form-horizontal u-form-spacing-0 u-inner-form" source="email" name="form" style="padding: 0px;">
+                    <div class="u-form-email u-form-group u-label-none">
+                      <label for="email-6564" class="u-label">Email</label>
+                      <input type="email" placeholder="Enter a valid email address" id="email-6564" name="email" class="u-grey-5 u-input u-input-rectangle" required="" wfd-id="id910">
+                    </div>
+                    <div class="u-align-left u-form-group u-form-submit u-label-none">
+                      <a href="#" class="u-active-black u-border-1 u-border-active-black u-border-hover-black u-border-palette-5-base u-btn u-btn-submit u-button-style u-custom-color-2 u-hover-black u-btn-1">Submit</a>
+                      <input type="submit" value="submit" class="u-form-control-hidden" wfd-id="id911">
+                    </div>
+                    <div class="u-form-send-message u-form-send-success"> Thank you! Your message has been sent. </div>
+                    <div class="u-form-send-error u-form-send-message"> Unable to send your message. Please fix errors then try again. </div>
+                    <input type="hidden" value="" name="recaptchaResponse" wfd-id="id912">
+                    <input type="hidden" name="formServices" value="a1d80eb1-58dd-d969-1734-043deb05fd08">
+                  </form>
+                </div><span class="u-custom-color-2 u-file-icon u-icon u-icon-1" data-href="https://www.facebook.com/miraclecoffee.eleven"><img src="images/2175193-e7fba8b8.png" alt=""></span>
+              </div>
+            </div>
+            <div class="u-align-left u-container-style u-layout-cell u-left-cell u-palette-5-light-3 u-size-26 u-layout-cell-2">
+              <div class="u-container-layout u-container-layout-2">
+                <h3 class="u-align-left u-text u-text-custom-color-2 u-text-2"> Địa điểm &amp; Thời gian</h3>
+                <h5 class="u-align-left u-text u-text-black u-text-3">
+                  <a href="https://nicepage.com/c/full-width-slider-html-templates" class="u-active-none u-border-2 u-border-active-black u-border-hover-black u-border-no-left u-border-no-right u-border-no-top u-border-palette-5-base u-bottom-left-radius-0 u-bottom-right-radius-0 u-btn u-button-style u-hover-none u-radius-0 u-text-active-black u-text-black u-text-hover-palette-5-dark-1 u-top-left-radius-0 u-top-right-radius-0 u-white u-btn-2" target="_blank"> Số 22, Ngõ 279, Đường Giảng Võ, Phường Cát Linh, Quận Đống Đa, Thành phố Hà Nội</a>
+                </h5>
+                <p class="u-align-left u-text u-text-4"> Monday - Sunday<br>8:00am - 11:00pm
+                </p>
+                <p class="u-align-left u-text u-text-custom-color-2 u-text-5">Hân hạnh được phục vụ quý khách !</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    
+    
+    
+    
+   
+  <section class="u-align-center u-black u-clearfix u-container-style u-dialog-block u-opacity u-opacity-70 u-valign-middle u-dialog-section-6" id="sec-704f">
+      <div class="u-container-style u-dialog u-shape-rectangle u-white u-dialog-1">
+        <div class="u-container-layout u-container-layout-1">
+          <h2 class="u-align-center u-text u-text-default u-text-1">Cảm ơn!</h2>
+          <p class="u-align-center u-text u-text-default u-text-2">Lời cảm ơn ngọt ngào nhất đến từ Miracle!Nhớ đăng kí để nhận được thông tin mới nhất từ chúng mình nhé</p>
+          <a href="Home.html" class="u-border-2 u-border-palette-5-base u-btn u-btn-round u-button-style u-hover-black u-palette-5-dark-1 u-radius-50 u-text-body-alt-color u-text-hover-white u-btn-1">Về trang chủ!</a>
+        </div><button class="u-dialog-close-button u-icon u-text-grey-50 u-icon-1"><svg class="u-svg-link" preserveAspectRatio="xMidYMin slice" viewBox="0 0 413.348 413.348" style=""><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-5801"></use></svg><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" xml:space="preserve" class="u-svg-content" viewBox="0 0 413.348 413.348" id="svg-5801"><path d="m413.348 24.354-24.354-24.354-182.32 182.32-182.32-182.32-24.354 24.354 182.32 182.32-182.32 182.32 24.354 24.354 182.32-182.32 182.32 182.32 24.354-24.354-182.32-182.32z"></path></svg></button>
+      </div>
+    </section><style>.u-dialog-section-6 .u-dialog-1 {
+  width: 566px;
+  min-height: 366px;
+  height: auto;
+  box-shadow: 5px 5px 20px 0 rgba(0,0,0,0.4);
+  margin: 60px auto;
+}
+
+.u-dialog-section-6 .u-container-layout-1 {
+  padding: 40px 30px;
+}
+
+.u-dialog-section-6 .u-text-1 {
+  font-size: 2.5rem;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  font-weight: 700;
+  margin: 50px auto 0;
+}
+
+.u-dialog-section-6 .u-text-2 {
+  margin: 20px 0 0;
+}
+
+.u-dialog-section-6 .u-btn-1 {
+  border-style: none;
+  font-size: 1rem;
+  background-image: none;
+  text-transform: uppercase;
+  font-weight: 600;
+  letter-spacing: 1px;
+  margin: 20px auto 0;
+  padding: 9px 47px 10px 46px;
+}
+
+.u-dialog-section-6 .u-icon-1 {
+  width: 15px;
+  height: 15px;
+  left: auto;
+  top: 17px;
+  position: absolute;
+  right: 16px;
+}
+
+@media (max-width: 991px) {
+  .u-dialog-section-6 .u-container-layout-1 {
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+}
+
+@media (max-width: 767px) {
+  .u-dialog-section-6 .u-dialog-1 {
+    width: 540px;
+  }
+}
+
+@media (max-width: 575px) {
+  .u-dialog-section-6 .u-dialog-1 {
+    width: 340px;
+  }
+
+  .u-dialog-section-6 .u-container-layout-1 {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .u-dialog-section-6 .u-text-1 {
+    font-size: 2.25rem;
+  }
+}</style>
+
+
+</body>
+</html>
